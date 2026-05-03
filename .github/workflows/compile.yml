@@ -1,0 +1,31 @@
+name: Compile Rule-set
+
+on:
+  push:
+    paths:
+      - 'my_block.json' # Запускать только когда меняется этот файл
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Sing-box
+        run: |
+          VERSION="1.8.0" # Укажи версию, которую использует твой сервер
+          wget https://github.com/SagerNet/sing-box/releases/download/v${VERSION}/sing-box-${VERSION}-linux-amd64.tar.gz
+          tar -xzf sing-box-${VERSION}-linux-amd64.tar.gz
+          mv sing-box-*/sing-box .
+
+      - name: Compile JSON to SRS
+        run: |
+          ./sing-box rule-set compile my_block.json
+
+      - name: Commit and Push SRS
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git commit -b "Compile rule-set" my_block.srs
+          git push
