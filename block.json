@@ -3,14 +3,11 @@
   "rules": [
     {
       "domain": [
-        "max.ru",
-        "max.ru",
         "max.ru"
       ]
     },
     {
       "domain_suffix": [
-        "max.ru",
         "max.ru"
       ]
     }
