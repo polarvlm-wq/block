@@ -3,12 +3,12 @@
   "rules": [
     {
       "domain": [
-        "max.ru"
+        "rutracker.org"
       ]
     },
     {
       "domain_suffix": [
-        "max.ru"
+        "rutracker.org"
       ]
     }
   ]
