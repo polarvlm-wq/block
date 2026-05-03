@@ -3,12 +3,12 @@
   "rules": [
     {
       "domain": [
-        "max.ru"
+        "abc.com"
       ]
     },
     {
       "domain_suffix": [
-        "max.ru"
+        "abc.com"
       ]
     }
   ]
