@@ -21,12 +21,18 @@ jobs:
 
       - name: Compile JSON to SRS
         run: |
-          ./sing-box rule-set compile block.json
+          chmod +x ./sing-box
+          ./sing-box rule-set compile block.json || (echo "Compilation failed!" && exit 1)
 
       - name: Commit and Push SRS
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
           git add block.srs
-          git commit -b "Compile rule-set"
-          git push
+          # Проверяем, изменился ли файл, чтобы не было ошибки при коммите
+          if git diff --cached --exit-code --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Compile rule-set"
+            git push
+          fi
