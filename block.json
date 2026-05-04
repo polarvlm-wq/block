@@ -3,12 +3,14 @@
   "rules": [
     {
       "domain": [
-        "rutracker.org"
+        "rutracker.org",
+        "asus.com"
       ]
     },
     {
       "domain_suffix": [
-        "rutracker.org"
+        "rutracker.org",
+        "asus.com"
       ]
     }
   ]
