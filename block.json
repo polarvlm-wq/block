@@ -4,13 +4,15 @@
     {
       "domain": [
         "rutracker.org",
-        "asus.com"
+        "asus.com",
+        "windows64.net"
       ]
     },
     {
       "domain_suffix": [
         "rutracker.org",
-        "asus.com"
+        "asus.com",
+        "windows64.net"
       ]
     }
   ]
