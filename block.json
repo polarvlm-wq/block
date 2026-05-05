@@ -5,14 +5,16 @@
       "domain": [
         "rutracker.org",
         "asus.com",
-        "windows64.net"
+        "windows64.net",
+        "github.com"
       ]
     },
     {
       "domain_suffix": [
         "rutracker.org",
         "asus.com",
-        "windows64.net"
+        "windows64.net",
+        "github.com"
       ]
     }
   ]
